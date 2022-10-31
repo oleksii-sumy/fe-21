@@ -7,7 +7,7 @@
 
 function getPrimes (num) {
   console.log ('NUM:', num);
-for (const number = 2; number <= num; number += 1) {
+for (let number = 2; number <= num; number += 1) {
 let counter = 0;
 for (let index = 2; index <= number; index +=1) {
 if (number & index === 0) {
