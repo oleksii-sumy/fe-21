@@ -25,6 +25,9 @@ const resultPush = numberList2.push(100);
 console.log(' Push ' + resultPush);
 console.log('ARRAY AFTER PUSH    ' + numberList2);
 
+// .shift() удаляет первый элемент из массива и возвращает его значение. Этот метод изменяет длину массива.
+
+
 // unshift method
 // INPUT: any type;
 // OUTPUT: length;

@@ -4,14 +4,31 @@
  * A callback function can run after another function has finished
  * */
 
+// input: number, number, function;
+// output: undefined;
 function sum(from, to, resolver) {
-  // put your code here
+let result = 0;
+    for (let index = from; index <= to; index += 1) {
+        result += index;
+    }
+  resolver(result);
 
 
 }
+// input: number;
+// output: undefined;
+
+//test data
+//1.
 
 function printResult(res) {
-  // put your code here
-
-  
+  console.log(res);
 }
+sum (10, 15, printResult);
+
+// 2.
+function alertResult(res) {
+  alert(res);
+}
+sum (10, 15, alertResult);
+
