@@ -45,3 +45,22 @@ getPrimes(9);
 // 2.2 if number % index === 0 -> count ++
 // 2.3 if coount >= 2  -> is not prime
 // 3. if prime -> console.log
+
+
+
+function getPrimes(num) {
+
+  for (let number = 2; number <= num; number += 1) {
+              console.log('ПЕрший цикл: ' + number);
+
+    for (let index = 1; index <= number; index += 1) {
+                    console.log( 'Другий цикл: ' + index);
+
+      if (number % index === 0) {
+              console.log('Шукане числоЖ ' + number);
+      }
+  }
+}
+}
+//test data
+getPrimes(7);
