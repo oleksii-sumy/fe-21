@@ -37,3 +37,22 @@ console.log('ARRAY BEFORE SUNHIFT ' + numberList3);
 const resultShift = numberList3.shift();
 console.log(' UNSHIFT ' + resultPush);
 console.log('ARRAY AFTER UNSHIFT ' + numberList3);
+
+
+/////////// FILTER
+// INPUT: callback;
+// OUTPUT: array;
+
+// CALLBACK:
+// INPUT: el, index. array
+// OUTPUT: array;
+
+
+
+
+const onatherArr = [1, 200, 3, 400, 105, 6, 7];
+
+    function callBacFilter (num) {num > 5}
+
+    const filterRes = onatherArr.filter(el => el >100);
+    console.log (filterRes);

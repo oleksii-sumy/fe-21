@@ -5,6 +5,10 @@
 // 3. Write draft solution & testing
 // 4. Refactoring & final testing -> final solution
 
+
+// problems
+// loop inside loop
+
 function getPrimes(num) {
   // console.log('NUM:', num);   for testing
 
@@ -64,3 +68,28 @@ function getPrimes(num) {
 }
 //test data
 getPrimes(7);
+
+
+//refactoring
+// input: number;
+// output: boolean;
+
+function isPrime (number) {
+  console.log('NUM', num);
+
+  for (let index = 1; index <= number; index += 1) {
+    if (number % index === 0) {
+      counter += 1;
+    }
+  }
+  return counter === 2;
+}
+
+function getPrimes(num) {
+  for (let number = 2; number <= num; number += 1) {
+          if (isPrime(number)) {
+        console.log(number);
+      
+}
+  }
+}
