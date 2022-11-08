@@ -56,3 +56,6 @@ const onatherArr = [1, 200, 3, 400, 105, 6, 7];
 
     const filterRes = onatherArr.filter(el => el >100);
     console.log (filterRes);
+
+
+    

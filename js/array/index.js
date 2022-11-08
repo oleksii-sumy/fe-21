@@ -1,95 +1,73 @@
-// How to work on tech tasks. Step by step guide
+// input: callback, context
+// out: array
 
-// 1. Learn requirement (WHAT?)
-// 2. Create step by step algo (& input/output for functions) (HOW?)
-// 3. Write draft solution & testing
-// 4. Refactoring & final testing -> final solution
+const numbersList = [5, 0, 8, 10, -4, 50, 220];
+
+// input: element, index, arr
+// out:new element
+
+const mapRes = numbersList.map((el) => {
+  return el * el;
+});
+
+const numbersList = [5, 0, 8, 10, -4, 50, 220];
+const mapRes2 = numbersList.map(el => (el > 0 ? el **2 : el));
+console.log(mapRes2);
 
 
-// problems
-// loop inside loop
+//find
 
-function getPrimes(num) {
-  // console.log('NUM:', num);   for testing
+// input: callback
+// out: element  or undefined
 
-  for (let number = 2; number <= num; number += 1) {
-    // console.log ('CHECKING IF NUMBER IS PRIME' + number);  for testing
-    let counter = 0;
+// callback
+// input: el, ind, arr
+// out: boollean
 
-    for (let index = 1; index <= number; index += 1) {
-      if (number % index === 0) {
-        counter += 1;
-      }
-    }
-    // console.log('For number ' + number + ' counter find ' + counter);  for testing
-    if (counter == 2) {
-      console.log(number);
-    }
+
+const find = numbersList.find(el => el > 100); 
+
+//forEach
+
+// input: callback
+// out: undefined
+
+// callback
+// input: el, ind, arr
+// out: undefined!!!!!!!!!!!!!!--------------
+
+const numbersList = [5, 0, 8, 10, -4, 50, 220];
+numbersList.forEach(el =>{
+ 
+   if(el > 0) {console.log(el )}
+});
+//  or console.log (el > 0 ? el : 'Err')
+// ternary:
+// condition & valueA : valueB (не дія !!!--------------)
+
+//reduce
+
+// input: callback, accInitValue (option)
+// out: any type
+
+// callback
+// input: acc, el, ind(option), arr(option)
+// out: any type-
+
+
+
+const transactions = [5, 0, 8, 10, -4, 50, 220, 1203, 556, 41];
+
+const reduceRes = transactions.reduce((acc, el) => {
+  console.log('acc' + acc);
+  if (el < 0) {
+    acc += el;
   }
-}
-//test data
-getPrimes(9);
-// getPrimes(11);
-// getPrimes(16);
+  return acc + el}, 0);
 
-/// input 10
-// autput:
-// 2
-// 3
-// 5
-// 7
+console.log(reduceRes);
 
-//// algoritm:
-
-// a)  Not best variant:
-// 1. iterate from 1 to num
-// 2. check if num is prime
-// 2.0 create CountQueuingStrategy
-// 2.1 itarate 1..number
-// 2.2 if number % index === 0 -> count ++
-// 2.3 if coount >= 2  -> is not prime
-// 3. if prime -> console.log
-
-
-
-function getPrimes(num) {
-
-  for (let number = 2; number <= num; number += 1) {
-              console.log('ПЕрший цикл: ' + number);
-
-    for (let index = 1; index <= number; index += 1) {
-                    console.log( 'Другий цикл: ' + index);
-
-      if (number % index === 0) {
-              console.log('Шукане числоЖ ' + number);
-      }
-  }
-}
-}
-//test data
-getPrimes(7);
-
-
-//refactoring
-// input: number;
-// output: boolean;
-
-function isPrime (number) {
-  console.log('NUM', num);
-
-  for (let index = 1; index <= number; index += 1) {
-    if (number % index === 0) {
-      counter += 1;
-    }
-  }
-  return counter === 2;
-}
-
-function getPrimes(num) {
-  for (let number = 2; number <= num; number += 1) {
-          if (isPrime(number)) {
-        console.log(number);
-      
-}
-  }
-}
+// refactiring:
+const reduceRes = transactions.reduce((acc, el) => (el < 0 ? acc + el : acc),0);
+ 
+  
