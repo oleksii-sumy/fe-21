@@ -71,3 +71,56 @@ console.log(reduceRes);
 const reduceRes = transactions.reduce((acc, el) => (el < 0 ? acc + el : acc),0);
  
   
+// FILTER - псевдофільтр своїми руками
+
+// input: arr, callback;
+// out: arr;
+
+//callback
+// input: el, ind, arr;
+// out: bool;
+
+
+// algo
+// 0. create resulr arr;
+// 1. iterate arr - loop
+// 2. call callback for each el
+// 3. if callback -true -> push el
+// 4. return res
+
+
+
+
+
+const filterArrayElements = (arr, callback) => {
+  const resultArr = [];
+  for(let index = 0; index <= arr.length; index += 1) {
+    const callBackResult = callback(arr[index], index, arr);
+if (callBackResult === true) {
+  return resultArr.push(arr[index]);
+}
+  }
+  return resultArr;
+};
+// refactoring:
+
+const filterArrayElements = (arr, callback) => {
+  const resultArr = [];
+  for (let index = 0; index <= arr.length; index += 1) {
+    const el = arr[index];
+    if (callBackResult(el, index, arr)) {
+      resultArr.push(el);
+    }
+  }
+  return resultArr;
+};
+
+
+// testing
+
+const arr = [1, 2, 3, 4, 5]
+
+const func = (el, index, arr) => {
+index > 2 && el > 5
+}
+console.log(filterArrayElements(arr, func));
