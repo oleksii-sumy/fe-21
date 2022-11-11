@@ -124,3 +124,21 @@ const func = (el, index, arr) => {
 index > 2 && el > 5
 }
 console.log(filterArrayElements(arr, func));
+
+
+// АНАЛОГІЯ З MAP методом:
+const mapArrayElements = (arr, callback) => {
+  const resArr = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    let arrElement = arr[index];
+    let elementCallback = callback(arrElement, index, arr);
+    resArr.push(elementCallback);
+  }
+  return resArr;
+};
+const arr = [1, 2, 3, 4, 5];
+
+const addToEvenInde = (arrElement, index, arr) => {
+  const num = 10;
+  arrElement + num;
+};
