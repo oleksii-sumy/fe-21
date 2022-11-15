@@ -51,5 +51,6 @@ function addPropertyV4(obj4, key, value) {
 // (якщо вони не були заявлені  при створенні самої ф-ції) і створюють з низ масив
 
 function sum(...args) {
-  console.log(args(1, 9, 0)); //args - масив із аргументів.
+  //args - масив із аргументів.
+  console.log(args(1, 9, 0));
 }
