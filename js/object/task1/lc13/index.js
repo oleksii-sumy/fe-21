@@ -39,11 +39,11 @@
 
 // ---------refacroring
 
-const getCustomersList = obj => {
+const getCustomersList = obj =>
   Object.entries(obj)
-    .map(entry => ({ ...entry[1], id: entry[0] }))
+    .map(([key, value]) => ({ ...value, id: key}))
     .sort((a, b) => a.age - b.age);
-  };
+ 
 
 
 
