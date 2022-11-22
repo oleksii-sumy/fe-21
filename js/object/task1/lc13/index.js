@@ -10,31 +10,41 @@
 
 
 
+// const getCustomersList = obj => {
+//     const resArr = [];
+//   const entries = Object.entries(obj);
+//   console.log(entries);
+
+// for(let index = 0; index <entries.length; index +=1){
+// // 1.get key and value from entry: 
+// // 2. add new id key to value
+// // 3. push
+// //  coding:
+// // const entry = entries[index];
+// // const key = entry[0];
+// // const value = entry[1];
+
+// // console.log(key, value);
+
+// // const resObj = {...value, id: key};
+// // resArr.push(resObj);
+
+//     resArr.push({ ...entries[index][1], id: entries[index][0] });
+// console.log(resArr);
+// }
+// resArr.sort((a, b) =>a.age - b.age);
+// return resArr;
+// };
+
+
+// ---------refacroring
+
 const getCustomersList = obj => {
-    const resArr = [];
-  const entries = Object.entries(obj);
-  console.log(entries);
+  Object.entries(obj)
+    .map(entry => ({ ...entry[1], id: entry[0] }))
+    .sort((a, b) => a.age - b.age);
+  };
 
-for(let index = 0; index <entries.length; index +=1){
-// 1.get key and value from entry: 
-// 2. add new id key to value
-// 3. push
-//  coding:
-// const entry = entries[index];
-// const key = entry[0];
-// const value = entry[1];
-
-// console.log(key, value);
-
-// const resObj = {...value, id: key};
-// resArr.push(resObj);
-
-    resArr.push({ ...entries[index][1], id: entries[index][0] });
-console.log(resArr);
-}
-resArr.sort((a, b) =>a.age - b.age);
-return resArr;
-};
 
 
 // test Data
@@ -59,3 +69,4 @@ const customers = {
 };
 
 getCustomersList(customers);
+
