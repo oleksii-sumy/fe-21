@@ -37,6 +37,18 @@
 // };
 
 
+// ---------!!!!! MORE UNDERSTANDING METHODS--------!!!!!
+
+// const getCustomersList = obj =>
+//   Object.entries(obj)
+//     .map(entry => ({ ...entry, id: entry[0] }))
+//     .sort((a, b) => a.age - b.age);
+ 
+
+
+
+
+
 // ---------refacroring
 
 const getCustomersList = obj =>
@@ -70,3 +82,10 @@ const customers = {
 
 getCustomersList(customers);
 
+
+
+function getResult(obj) {
+Ob
+
+
+}
