@@ -3,7 +3,11 @@ import React from 'react';
 //uotput: jsx
 
 const Logout = () => {
-  return <button className="logout btn">Logout</button>;
+  return (
+    <button className="logout btn" onClick={props.onLogout}>
+      Logout
+    </button>
+  );
 };
 
 export default Logout;
