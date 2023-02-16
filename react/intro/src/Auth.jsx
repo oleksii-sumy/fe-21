@@ -15,12 +15,37 @@ class Auth extends Component {
     isSpinnerOn: false,
   };
 
+  handleLogin = () => {
+    this.setState({
+      isSpinnerOn: true,
+    });
+
+    setTimeout(() => {
+      this.setState({
+        isLogIn: true,
+        isSpinnerOn: false,
+      });
+    }, 2000);
+  }
+
+  handleLogout = () => {
+    this.setState({
+      isLogIn: false,
+    })
+  };
+
   render() {
+    let button;
+    if(this.state.isLogIn) {
+      button = <Logout onLogout={this.handleLogout} />;
+    } else {
+      button = this.state.isSpinnerOn ?  <Spinner size={'50px'} /> : <Login onLogin={this.handleLogin} />;
+
+    }
     return (
       <>
-        <Login />
-        <Logout />
-        <Spinner />
+        {button}
+        
       </>
     );
   }

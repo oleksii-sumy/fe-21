@@ -24,5 +24,5 @@ export default App;
 
 
 // Component:
-//input: props (object with dif/ type)
+//input: props (object with dif. type)
 // output: jsx
