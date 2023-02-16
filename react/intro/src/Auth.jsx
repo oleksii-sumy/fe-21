@@ -26,28 +26,26 @@ class Auth extends Component {
         isSpinnerOn: false,
       });
     }, 2000);
-  }
+  };
 
   handleLogout = () => {
     this.setState({
       isLogIn: false,
-    })
+    });
   };
 
   render() {
     let button;
-    if(this.state.isLogIn) {
+    if (this.state.isLogIn) {
       button = <Logout onLogout={this.handleLogout} />;
     } else {
-      button = this.state.isSpinnerOn ?  <Spinner size={'50px'} /> : <Login onLogin={this.handleLogin} />;
-
+      button = this.state.isSpinnerOn ? (
+        <Spinner size={'50px'} />
+      ) : (
+        <Login onLogin={this.handleLogin} />
+      );
     }
-    return (
-      <>
-        {button}
-        
-      </>
-    );
+    return <>{button}</>;
   }
 }
 export default Auth;
