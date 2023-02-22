@@ -10,15 +10,16 @@ state = {
   curPage: 1,
 }
 render() {
+  const {users} = this.props;
   return (
-    <>
+    <div>
       <Pagination />
       <ul className="users">
-        {this.props.users.map(user => {
-          <User name={user.name} age={user.age} key={user.is}/>
-        })}
+        {users.map(user => 
+          <User name={user.name} age={user.age} key={user.id}/>
+        )}
       </ul>
-    </>
+    </div>
   );
 
 }

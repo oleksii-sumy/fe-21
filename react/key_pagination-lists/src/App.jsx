@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import UsersList from './UsersList';
 
 const users = [
-  { id: 11, name: 'Tom', age: 20 },
-  { id: 22, name: 'Bob', age: 100 },
-  { id: 3424, name: 'Rob', age: 32 },
-  { name: 'Rim', age: 45 },
-  { name: 'Skin', age: 27 },
-  { name: 'Bobby', age: 26 },
-  { name: 'Jack', age: 19 },
-  { name: 'Bom', age: 21 },
-  { name: 'DOM', age: 22 },
-  { name: 'Toretto', age: 60 },
+  { id: 1, name: 'Tom', age: 20 },
+  { id: 2, name: 'Bob', age: 100 },
+  { id: 3, name: 'Rob', age: 32 },
+  { id: 4, name: 'Rim', age: 45 },
+  { id: 5, name: 'Skin', age: 27 },
+  { id: 6, name: 'Bobby', age: 26 },
+  { id: 7, name: 'Jack', age: 19 },
+  { id: 8, name: 'Bom', age: 21 },
+  { id: 9, name: 'DOM', age: 22 },
+  { id: 10, name: 'Toretto', age: 60 },
 ];
 
 class App extends Component {
