@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "presets": [
     [
@@ -12,3 +13,19 @@
   ],
   "plugins": ["@babel/plugin-proposal-class-properties"]
 }
+=======
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": "> 1%",
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
+}
+>>>>>>> b2992b0cff832e0a971ca2aecbc8b20a5abac8f6
